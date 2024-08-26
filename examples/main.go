@@ -1,11 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 
-	isOk := calculator()
-	fmt.Println("isOk : ", isOk)
+	calculator()
 
 }
 
@@ -18,6 +19,7 @@ func calculator() bool {
 	}()
 
 	fmt.Println(add(10, 20))
+
 	processSafeCall(func() {
 		fmt.Println(MustMin(20, 10))
 	})
